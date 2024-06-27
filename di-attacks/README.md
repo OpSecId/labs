@@ -3,8 +3,15 @@
 
 ## Setup
 
+### Clone the repo
+```
+git clone https://github.com/OpSecId/labs.git
+```
+
+### Launch agent and create a did
 ```bash
 # Launch agent
+cd labs
 docker compose -f ./docker/docker-compose.yml up
 
 # Create did
@@ -22,7 +29,7 @@ curl -X 'POST' \
 
 ```
 
-## Issue a credential
+### Issue a credential
 ```bash
 VC=$(curl -X 'POST' \
   'http://localhost:8020/vc/credentials/issue' \
@@ -55,7 +62,12 @@ VC=$(curl -X 'POST' \
 
 ```
 
-## Verify the credential
+### Verify the credential
+
+#### With a third party application
+Navigate to the [Univerifier](https://univerifier.io/) and paste the content of the VC into the input field.
+
+#### With the agent
 ```bash
 curl -X 'POST' \
   'http://localhost:8020/vc/credentials/verify' \
@@ -98,4 +110,18 @@ curl -X 'POST' \
 
 
 ```
-## Modify the context:
+### Modify the context:
+```
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://labs.opsec.id/ctx/vdl/fake_age.jsonld",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+```
+```
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://labs.opsec.id/ctx/vdl/swap_names.jsonld",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+```
