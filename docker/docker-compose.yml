@@ -1,0 +1,18 @@
+---
+services:
+
+  agent:
+    image: ghcr.io/hyperledger/aries-cloudagent-python:py3.9-0.12.1
+    ports:
+      - 8020:8020
+    entrypoint: ["aca-py", "start"]
+    command: [
+      '--no-ledger',
+      # '--no-transport',
+      '-it', 'http', '0.0.0.0', '8021',
+      '-ot', 'http',
+      '--endpoint', 'https://localhost',
+      '--admin', '0.0.0.0', '8020',
+      '--wallet-allow-insecure-seed',
+      '--admin-insecure-mode'
+    ]

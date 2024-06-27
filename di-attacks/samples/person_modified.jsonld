@@ -1,0 +1,17 @@
+{
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://www.w3.org/ns/credentials/examples/v2",
+      {"prénom":"https://www.w3.org/ns/credentials/examples#givenName", "nomDeFamille":"https://www.w3.org/ns/credentials/examples#familyName"}
+    ],
+    "type": [
+      "VerifiableCredential"
+    ],
+    "issuer": "did:key:z6MkgKA7yrw5kYSiDuQFcye4bMaJpcfHFry3Bx45pdWh3s8i",
+    "issuanceDate": "2024-01-01T00:00:00Z",
+    "credentialSubject": {
+      "type": "Person",
+      "prénom": "Patrick",    
+      "nomDeFamille": "St-Louis"
+    }
+  }
