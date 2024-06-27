@@ -13,8 +13,12 @@ git clone https://github.com/OpSecId/labs.git
 # Launch agent
 cd labs
 docker compose -f ./docker/docker-compose.yml up
+```
 
-# Create did
+Open the [agent's admin interface](http://localhost:8020), the [Univerifier](https://univerifier.io/) and the [json-ld playground](https://json-ld.org/playground/)
+
+### Create a DID
+```bash
 curl -X 'POST' \
   'http://localhost:8020/wallet/did/create' \
   -H 'accept: application/json' \
