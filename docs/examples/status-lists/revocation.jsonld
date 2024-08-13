@@ -11,7 +11,7 @@
     "credentialSubject": {
       "type": "BitstringStatusList",
       "statusPurpose": "revocation",
-      "encodedList": "H4sIADAcmGYC_-3BAQEAAACCIP-vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfBhJl2AVqGEAAA",
+      "encodedList": "uH4sIADAcmGYC_-3BAQEAAACCIP-vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfBhJl2AVqGEAAA",
       "ttl": 300000
     },
     "proof": {
